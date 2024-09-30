@@ -1052,7 +1052,9 @@ function overrideWindowOpen() {
       if (url.startsWith("tg://") || url.startsWith("https://t.me")) {
         utils.openTelegramLink(url);
       } else if (url.startsWith("bnc://")) {
-        const param = url.substring("bnc://".length);
+        const param = url.substring(
+          "bnc://app.binance.com/cedefi/wc?uri=".length
+        );
         console.log("link", `https://app.binance.com/cedefi/wc?uri=${param}`);
         utils.openLink(`https://app.binance.com/cedefi/wc?uri=${param}`);
       } else if (url.startsWith("bitkeep://")) {
