@@ -43,7 +43,7 @@ export const createWalletConnectModal = () => {
     projectId,
     enableAnalytics: true, // Optional - defaults to your Cloud configuration
     featuredWalletIds: [
-      "38f5d18bd8522c244bdd70cb4a68e0e718865155811c043f052fb9f1c51de662", // Bitget Wallet project ID
+      "8a0ee50d1f22f6651afcae7eb4253e52a3310b90af5daef78a8c4929a9bb99d4", // Bitget Wallet project ID
     ],
   });
 };
