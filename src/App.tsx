@@ -31,10 +31,12 @@ import WalletConnectModal from "./components/connectors/WalletConnectModal";
 import { useDispatch, useSelector } from "react-redux";
 import { setConnectionState } from "./redux/connectionSlice";
 import React from "react";
-import {
-  isTelegramEnvironment,
-  overrideWindowOpen,
-} from "@bitget-wallet/omni-connect";
+// import {
+//   isTelegramEnvironment,
+//   overrideWindowOpen,
+// } from "@bitget-wallet/omni-connect";
+// @ts-ignore
+import { isTelegramEnvironment, overrideWindowOpen } from "./connect";
 
 enum View {
   LANDING = 0,
