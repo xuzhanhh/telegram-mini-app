@@ -33,6 +33,7 @@ WebApp.enableClosingConfirmation();
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const vConsole = new VConsole();
+vConsole.show();
 // // Create the WalletConnect modal
 try {
   createWalletConnectModal();
