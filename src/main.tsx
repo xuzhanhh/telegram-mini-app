@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import VConsole from "vconsole";
 
 // Redux
 import { Provider } from "react-redux";
@@ -30,6 +31,7 @@ WebApp.ready();
 // // Enable the closing confirmation
 WebApp.enableClosingConfirmation();
 
+const vConsole = new VConsole();
 // // Create the WalletConnect modal
 try {
   createWalletConnectModal();

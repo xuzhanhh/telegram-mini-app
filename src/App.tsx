@@ -71,8 +71,8 @@ class ErrorBoundary extends React.Component<
 }
 
 function App() {
-  console.log("App");
   const [view, setView] = useState<View>(View.LANDING);
+  console.log("App", view);
 
   // Connection State
   const connectionState = useSelector(
