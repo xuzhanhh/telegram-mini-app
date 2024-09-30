@@ -12,6 +12,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@bitget-wallet/omni-connect": "^0.0.2",
         "@reduxjs/toolkit": "^2.2.4",
         "@tanstack/react-query": "^5.29.0",
         "@tonconnect/ui-react": "^2.0.0",

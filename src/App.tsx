@@ -31,6 +31,10 @@ import WalletConnectModal from "./components/connectors/WalletConnectModal";
 import { useDispatch, useSelector } from "react-redux";
 import { setConnectionState } from "./redux/connectionSlice";
 import React from "react";
+import {
+  isTelegramEnvironment,
+  overrideWindowOpen,
+} from "@bitget-wallet/omni-connect";
 
 enum View {
   LANDING = 0,
@@ -73,7 +77,18 @@ class ErrorBoundary extends React.Component<
 function App() {
   const [view, setView] = useState<View>(View.LANDING);
   console.log("App", view);
-
+  useEffect(() => {
+    const initOverrideWindowOpen = async () => {
+      // Check if it's a Telegram Mini App environment
+      const isTMA = await isTelegramEnvironment();
+      if (!isTMA) {
+        return;
+      }
+      // Execute @bitget-wallet/omni-connect initialization
+      overrideWindowOpen();
+    };
+    initOverrideWindowOpen();
+  }, []);
   // Connection State
   const connectionState = useSelector(
     (state: RootState) => state.connection.connectionState
