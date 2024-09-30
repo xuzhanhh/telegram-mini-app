@@ -31,6 +31,7 @@ WebApp.ready();
 // // Enable the closing confirmation
 WebApp.enableClosingConfirmation();
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const vConsole = new VConsole();
 // // Create the WalletConnect modal
 try {
